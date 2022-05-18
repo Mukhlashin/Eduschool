@@ -1,4 +1,4 @@
-package com.example.eduschool
+package com.skillage.eduschool
 
 import org.junit.Test
 

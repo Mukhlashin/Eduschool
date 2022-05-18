@@ -1,4 +1,4 @@
-package com.example.eduschool
+package com.skillage.eduschool
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
