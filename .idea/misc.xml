@@ -8,9 +8,11 @@
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/drawable/bg_button_white.xml" value="0.204" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/drawable/card_edu.xml" value="0.204" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1995" />
-        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_login.xml" value="0.4070221066319896" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_marketplace.xml" value="0.264" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_register.xml" value="0.11200000000000002" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/recyclerview_item.xml" value="0.6" />
       </map>
     </option>
   </component>
