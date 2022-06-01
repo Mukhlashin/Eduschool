@@ -19,7 +19,7 @@ public class GlobalVar {
     public static String id_materi;
     public static String namafile;
 
-    public static String namaSekolah,namaKabupaten,namaProvinsi;
+    public static String namaSekolah,namaYayasan,namaKabupaten,namaProvinsi;
 
     //siswa
     public static String NIS,idKelas,kelas,namaKelas,idSekolah,idSiswa;

@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        if (GlobalVar.TypeUser.toUpperCase().equals("ADMINKOPERASI")) {
+            Intent i = new Intent(getApplicationContext(), KoperasiMainActivity.class);
+            startActivity(i);
+        }
+
         db.getRecords("Select top 1 info from t_info where id_sekolah="+GlobalVar.idSekolah+" order by tanggal desc");
         if (db.Records.size()>0)
             lblNotice.setText(db.Records.get(0).get("info"));

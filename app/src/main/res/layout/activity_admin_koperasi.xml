@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".KoperasiMainActivity">
+    tools:context=".AdminKoperasiActivity">
 
     <LinearLayout
         android:layout_width="250dp"
@@ -72,47 +72,36 @@
             android:paddingVertical="20dp">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_marketplace"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:paddingStart="20dp"
-                android:layout_marginVertical="5dp"
-                android:drawableLeft="@drawable/box_resizeable"
-                android:background="?colorPrimary"
-                android:text="@string/daftar_produk"
-                android:textColor="@color/white" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_cart"
+                android:id="@+id/btn_logbook"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:drawableLeft="@drawable/online_shopping_resizeable"
                 android:background="?colorPrimary"
                 android:layout_marginVertical="5dp"
                 android:paddingStart="20dp"
-                android:text="Pesanan Kamu"
+                android:text="Daftar Pesanan/Laku"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_history"
+                android:id="@+id/btn_management"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginVertical="5dp"
                 android:paddingStart="20dp"
                 android:drawableLeft="@drawable/checklist_resizeable"
                 android:background="?colorPrimary"
-                android:text="Riwayat Belanja"
+                android:text="Manajemen Produk"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_account"
+                android:id="@+id/btn_stock"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:paddingStart="20dp"
                 android:layout_marginVertical="5dp"
-                android:drawableLeft="@drawable/packages_resizeable"
                 android:background="?colorPrimary"
-                android:text="Akun Kamu"
+                android:drawableLeft="@drawable/user_resizeable"
+                android:paddingStart="20dp"
+                android:text="Manajemen Stok"
                 android:textColor="@color/white" />
 
         </LinearLayout>

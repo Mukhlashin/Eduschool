@@ -18,6 +18,9 @@ public class MarketplaceAdapter extends RecyclerView.Adapter<MarketplaceAdapter.
     private String namaBarang, hargaBarang, soldBarang;
     private Image imgBarang;
 
+    DBAndroid db=new DBAndroid();
+    String SQL= "Select * from kop_barang";
+
     public MarketplaceAdapter(Context context) {
         this.context = context;
     }
@@ -27,19 +30,14 @@ public class MarketplaceAdapter extends RecyclerView.Adapter<MarketplaceAdapter.
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.marketplace_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
-        DBAndroid db=new DBAndroid();
-        String SQL= "Select * from kop_barang";
-        db.getRecords(SQL);
-        for (int i=0; i<=db.Records.size()-1; i++) {
-            namaBarang=db.Records.get(i).get("nama_barang");
-            hargaBarang=db.Records.get(i).get("harga");
-            soldBarang="soldbarang";
-        }
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        namaBarang=db.Records.get(position).get("nama_barang");
+        hargaBarang=db.Records.get(position).get("harga");
+        soldBarang="soldbarang";
         holder.txtNama.setText(namaBarang);
         holder.txtHarga.setText(hargaBarang);
         holder.txtSold.setText(soldBarang);
@@ -52,9 +50,7 @@ public class MarketplaceAdapter extends RecyclerView.Adapter<MarketplaceAdapter.
     }
 
     @Override
-    public int getItemCount() {
-        DBAndroid db=new DBAndroid();
-        String SQL= "Select * from kop_barang";
+    public int getItemCount() {;
         db.getRecords(SQL);
         return db.Records.size();
     }

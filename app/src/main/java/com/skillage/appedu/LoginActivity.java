@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     AppCompatButton btnLogin,btnDaftar;
      EditText txtUserID,txtPassword;
 
-    String role,userid;
+    String role,userid,idSekolah;
     ProgressDialog progressDialog ;
 
     @Override
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     role=db.Records.get(0).get("role");
                     userid=db.Records.get(0).get("userid");
+                    idSekolah=db.Records.get(0).get("id_sekolah");
                     switch (role) {
                         case "R.10" : //siswa
                             LoadingSiswa s = new LoadingSiswa();
@@ -69,6 +70,10 @@ public class LoginActivity extends AppCompatActivity {
                         case "R.5" : //guru
                             LoadingGuru g = new LoadingGuru();
                             g.execute();
+                            break;
+                        case "R.11" : //admin koperasi
+                            LoadingAdminKoperasi a = new LoadingAdminKoperasi();
+                            a.execute();
                             break;
                     }
                 }
@@ -175,7 +180,50 @@ public class LoginActivity extends AppCompatActivity {
                 progressDialog.hide();
             }
         }
+    }
 
+    private class LoadingAdminKoperasi extends AsyncTask<String, String, String> {
+        DBAndroid db=new DBAndroid();
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressDialog.setCanceledOnTouchOutside(false);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setMessage("Loading admin koperasi...");
+            progressDialog.show();
+
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            db.getRecords("Select * from vw_kop_barang where id_sekolah='"+idSekolah+"'");
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String rs) {
+            if (!db.isEmpty()) {
+                GlobalVar.TypeUser="ADMINKOPERASI";
+                GlobalVar.idSekolah =db.Records.get(0).get("id_sekolah");
+                GlobalVar.namaSekolah =db.Records.get(0).get("nama_sekolah");
+                GlobalVar.namaYayasan =db.Records.get(0).get("nama_yayasan");
+//                String saldo=db.Records.get(0).get("saldo");
+//                if (saldo.toUpperCase().equals("NULL")) saldo="0";
+//                GlobalVar.Saldo= Integer.parseInt( saldo);
+//                GlobalVar.fotoUser = GlobalFunction.loadImageFromURL(GlobalVar.URL+"/foto/"+db.Records.get(0).get("id")+".jpg");
+//                if (GlobalVar.fotoUser==null) {
+//                    GlobalVar.fotoUser= BitmapFactory.decodeResource(getResources(), R.drawable.photo_male_1);
+//                }
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                progressDialog.hide();
+            }
+        }
     }
 
 
