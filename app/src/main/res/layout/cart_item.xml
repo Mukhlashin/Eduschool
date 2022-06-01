@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+
+            <ImageView
+                android:id="@+id/foto_barang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cart"
+                android:contentDescription="@string/gambarbarang" />
+
+            <TextView
+                android:id="@+id/nama_barang"
+                android:text="Baju Seragam"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="5dp"
+                android:textStyle="bold"
+                android:textSize="4pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="2">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="30dp"/>
+
+            <EditText
+                android:id="@+id/edt_kuantitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="5pt"/>
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/harga_barang"
+                android:text="Rp 10000"
+                android:textStyle="bold"
+                android:textSize="5pt"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
