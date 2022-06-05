@@ -137,7 +137,6 @@ public class UploadMateriFragment extends Fragment implements DatePickerDialog.O
         txtTanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 dpd.show(requireFragmentManager(), "Datepickerdialog");
             }
         });
@@ -184,6 +183,7 @@ public class UploadMateriFragment extends Fragment implements DatePickerDialog.O
     public void updateFileName(String filename){
         lblFileName.setText(filename);
     }
+
     private void Refresh(){
         items.removeAllViews();
         ViewMateriRecordHeader v2=new ViewMateriRecordHeader(getContext());

@@ -144,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:text="Beli Sekarang"
                         android:textColor="@color/white"
-                        android:background="#ec4f4e"
+                        android:background="@color/colorPrimary"
                         android:textAllCaps="false" />
 
                 </androidx.cardview.widget.CardView>

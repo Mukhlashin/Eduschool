@@ -66,11 +66,19 @@
         <entry key="..\:/Anton/AppEdu/app/src/main/res/layout/viewtugas.xml" value="0.22" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/drawable/user_resizeable.xml" value="0.158" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_admin_koperasi.xml" value="0.264" />
-        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_koperasi_main.xml" value="0.4" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_edumain.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_koperasi_main.xml" value="0.2" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/activity_main.xml" value="0.1484375" />
-        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_cart.xml" value="0.4" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/cart_item.xml" value="0.264" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_cart.xml" value="0.25806451612903225" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_home_siswa.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_logbook.xml" value="0.1484375" />
-        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_uplaod_materi.xml" value="0.47126436781609193" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_management.xml" value="0.264" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_marketplace.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_product.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/fragment_uplaod_materi.xml" value="0.264" />
+        <entry key="..\:/Users/Abdullah Mukhlashin/AndroidStudioProjects/Eduschool/app/src/main/res/layout/marketplace_item.xml" value="0.1" />
         <entry key="..\:/Users/Abdullah Mukhlashin/Documents/GitHub/AppEdu/app/src/main/res/layout/activity_koperasi_main.xml" value="0.4" />
       </map>
     </option>

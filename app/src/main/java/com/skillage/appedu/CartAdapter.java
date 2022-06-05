@@ -7,29 +7,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MarketplaceAdapter extends  RecyclerView.Adapter<MarketplaceAdapter.ViewHolder> {
+public class CartAdapter extends  RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private Context context;
-    private String namaBarang, hargaBarang, soldBarang;
+    private String namaBarang, hargaBarang;
     private Image imgBarang;
 
     DBAndroid db=new DBAndroid();
     String SQL= "Select * from kop_barang where id_sekolah='"+GlobalVar.idSekolah+"'";
 
-    public MarketplaceAdapter(Context context) {
+    public CartAdapter(Context context) {
         this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.marketplace_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -38,21 +38,19 @@ public class MarketplaceAdapter extends  RecyclerView.Adapter<MarketplaceAdapter
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         namaBarang=db.Records.get(position).get("nama_barang");
         hargaBarang=db.Records.get(position).get("harga");
-        soldBarang="soldbarang";
         holder.txtNama.setText(namaBarang);
         holder.txtHarga.setText(hargaBarang);
-        holder.txtSold.setText(soldBarang);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainerView, ProductFragment.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack("")
-                        .commit();
-            }
-        });
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.fragmentContainerView, ProductFragment.class, null)
+//                        .setReorderingAllowed(true)
+//                        .addToBackStack("")
+//                        .commit();
+//            }
+//        });
     }
 
     @Override
@@ -63,15 +61,14 @@ public class MarketplaceAdapter extends  RecyclerView.Adapter<MarketplaceAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtNama,txtHarga, txtSold;
+        private TextView txtNama,txtHarga;
         private ImageView imgFoto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtNama = itemView.findViewById(R.id.txt_nama_barang);
-            txtHarga = itemView.findViewById(R.id.txt_harga_barang);
-            txtSold = itemView.findViewById(R.id.txt_sold_barang);
-            imgFoto = itemView.findViewById(R.id.img_foto_barang);
+            txtNama = itemView.findViewById(R.id.nama_barang);
+            txtHarga = itemView.findViewById(R.id.harga_barang);
+            imgFoto = itemView.findViewById(R.id.foto_barang);
         }
     }
 }

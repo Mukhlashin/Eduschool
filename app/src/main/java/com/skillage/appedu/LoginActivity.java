@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     role=db.Records.get(0).get("role");
                     userid=db.Records.get(0).get("userid");
-                    idSekolah=db.Records.get(0).get("id_sekolah");
+//                    idSekolah=db.Records.get(0).get("id_sekolah");
                     switch (role) {
                         case "R.10" : //siswa
                             LoadingSiswa s = new LoadingSiswa();
@@ -201,7 +201,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
-            db.getRecords("Select * from vw_kop_barang where id_sekolah='"+idSekolah+"'");
+            db.getRecords("Select * from vw_koperasi where userid='"+userid+"'");
             return null;
         }
 
@@ -209,6 +209,7 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(String rs) {
             if (!db.isEmpty()) {
                 GlobalVar.TypeUser="ADMINKOPERASI";
+                GlobalVar.userName =db.Records.get(0).get("nama_admin");
                 GlobalVar.idSekolah =db.Records.get(0).get("id_sekolah");
                 GlobalVar.namaSekolah =db.Records.get(0).get("nama_sekolah");
                 GlobalVar.namaYayasan =db.Records.get(0).get("nama_yayasan");
@@ -219,7 +220,7 @@ public class LoginActivity extends AppCompatActivity {
 //                if (GlobalVar.fotoUser==null) {
 //                    GlobalVar.fotoUser= BitmapFactory.decodeResource(getResources(), R.drawable.photo_male_1);
 //                }
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, AdminKoperasiActivity.class);
                 startActivity(intent);
                 progressDialog.hide();
             }
