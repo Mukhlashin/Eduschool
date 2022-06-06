@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EDUMainActivity">
+
+    <LinearLayout
+        android:id="@+id/panelMenu"
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgFoto"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/photo_male_1"
+                        app:riv_oval="true" />
+
+                    <TextView
+                        android:id="@+id/txtNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Gilang Atmafika"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/txtKeterangan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="Ilmu Komputer - 1812110268"
+                        android:textSize="12sp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/txtSekolah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="IBI Darmajaya"
+                        android:textSize="12sp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuSiswa"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/menuJadwal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_schedule"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Cek Jadwal"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuModul"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_school"
+                                android:tint="@color/purple_500"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                tools:ignore="UseAppTint" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Modul Pelajaran"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuUploadTugas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/brown_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Upload Tugas/PR"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+
+                    <LinearLayout
+                        android:id="@+id/menuAbsensi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assessment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/green_700" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Absensi"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuUlanganOnline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/brown_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Ulangan Online"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuRaporNilai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_grade"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/yellow_700" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Rapor Siswa"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuChatSekolahSiswa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/brown_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Chat Kelas"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuGuru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/menuJadwalMengajar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_schedule"
+                                android:tint="@color/colorPrimary"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                tools:ignore="UseAppTint" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Cek Jadwal Mengajar"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuGuruPresensi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment_turned_in"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/green_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Absensi Siswa"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuGuruUploadMateri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_school"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/purple_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Upload Materi"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuGuruUploadTugas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_school"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/purple_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Upload Tugas/PR"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+                    <LinearLayout
+                        android:id="@+id/menuDownloadTugasSiswa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/brown_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Download Tugas Siswa"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+                    <LinearLayout
+                        android:id="@+id/menuGuruBankSoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_assignment"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/brown_500" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Bank Soal Multiple Choice"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuGuruInputNilai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_looks_6"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/yellow_700" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Input Nilai"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/menuChatOnlineGuru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center">
+                        <LinearLayout
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/spacing_large">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                app:srcCompat="@drawable/ic_looks_6"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                                app:tint="@color/yellow_700" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Chat Online "
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mainframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/panelMenu"
+        android:background="@color/white"
+        android:paddingRight="3dp" />
+</RelativeLayout>

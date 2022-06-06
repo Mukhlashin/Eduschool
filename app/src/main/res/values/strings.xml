@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Edudig</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="register">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="what_if">Bila anda belum terdaftar</string>
+    <string name="wallpaper">wallpaper</string>
+
+    <string name="title_activity_home">News</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_elearning_main">ElearningMain</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="nama_unit_bisnis">Nama Unit Bisnis:</string>
+    <string name="warung_soto_bu_iing">WARUNG SOTO BU IING</string>
+    <string name="koperasi_sekolah">Koperasi Sekolah:</string>
+    <string name="sma_muhammadiyah_2_pamulang">SMA MUHAMMADIYAH 2 PAMULANG</string>
+    <string name="yayasan">Yayasan:</string>
+    <string name="dikdasmen_muh_tangerang">DIKDASMEN MUH TANGERANG</string>
+    <string name="daftar_produk">DAFTAR PRODUK</string>
+    <string name="daftar_pesanan_laku">DAFTAR PESANAN/LAKU</string>
+    <string name="manajemen_produk">MANAJEMEN PRODUK</string>
+    <string name="manajemen_stok">MANAJEMEN STOK</string>
+    <string name="gambarbarang">gambarbarang</string>
+
+    <string-array name="semester">
+        <item>Ganjil</item>
+        <item>Genap</item>
+    </string-array>
+</resources>

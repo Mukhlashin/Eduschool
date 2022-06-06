@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeSiswaFragment">
+
+    <Button
+        android:id="@+id/btnProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/btnKartuPelajar"
+        android:background="@drawable/bg_button_blue"
+        android:text="Profil Kamu" />
+    <Button
+        android:id="@+id/btnKartuPelajar"
+        android:background="@drawable/bg_button_blue"
+        android:text="Lihat Kartu Pelajar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/Kartu"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kotak_teks2"
+        android:padding="2dp"
+        android:layout_width="500dp"
+        android:layout_height="330dp">
+        <RelativeLayout
+            android:id="@+id/isiKartu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="KARTU PELAJAR"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgFoto"
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/siswa"
+                app:riv_corner_radius="10dp" />
+
+            <LinearLayout
+                android:id="@+id/panelData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_toRightOf="@+id/imgFoto"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nama"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblNama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raihan Idris"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="NISN"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblNISN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9953534003"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="NIS"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblNIS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9953"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Kelamin"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblJenisKelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-laki"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tempat/Tgl Lahir"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblTglLahir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bogor, 20 Oktober 2029"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Agama"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblAgama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Islam"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblTitikDua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/lblAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Raya Bogor No. 10"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgFoto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:text="Kartu Pelajar ini berlaku selama menjadi siswa"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/panelData"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imgFoto"
+                android:scaleType="fitXY"
+                android:src="@drawable/qrscan" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/Kartu"
+        android:id="@+id/petunjukkartu"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Tekan yang lama pada kartu untuk menyimpan kartu ke file."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:id="@+id/Profil"
+        android:visibility="gone"
+        android:paddingLeft="15dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <TableLayout
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Nama Siswa" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtNama"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="NISN" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtNIS"
+                    android:layout_width="150dp"
+                    android:inputType="none"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="NISN" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtNISN"
+                    android:layout_width="150dp"
+                    android:inputType="none"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Tempat Lahir" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtTempatLahir"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Tanggal Lahir" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtTglLahir"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Jenis Kelamin" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtJenisKelamin"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Agama" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtAgama"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Alamat" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/txtAlamat"
+                    android:layout_width="300dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Password Login" />
+
+                <TextView android:text=": " />
+
+                <EditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="300dp"
+                    android:background="@drawable/kotak_teks2"
+                    android:textStyle="bold" />
+            </TableRow>
+            <TableRow android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Ketik Ulang Password" />
+
+                <TextView android:text=": " />
+
+                <EditText
+                    android:id="@+id/txtPasswordUlang"
+                    android:layout_width="300dp"
+                    android:background="@drawable/kotak_teks2"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:text="Ganti Foto" />
+
+                <TextView android:text=": " />
+
+                <TextView
+                    android:id="@+id/btnAmbilFoto"
+                    android:background="@drawable/bg_button_blue"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Ambil File"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+        <ImageView
+            android:id="@+id/qrprofil"
+            android:src="@drawable/qrscan"
+            android:layout_toRightOf="@+id/data"
+            android:layout_below="@+id/judul"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <Button
+            android:id="@+id/btnSimpanFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/data"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_button_blue"
+            android:text="Simpan Profil" />
+    </RelativeLayout>
+
+</RelativeLayout>

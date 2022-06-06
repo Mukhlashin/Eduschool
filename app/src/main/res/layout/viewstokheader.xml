@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border_bottom"
+        android:layout_marginBottom="3dp"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtNamaBarang"
+            android:layout_width="150dp"
+            android:background="@drawable/bg_box_border_bottom"
+            android:layout_height="wrap_content"
+            android:text="Nama Barang"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtDeskripsi"
+            android:layout_width="330dp"
+            android:background="@drawable/bg_box_border_bottom"
+
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtStok"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Stok"
+            android:background="@drawable/bg_box_border_bottom"
+
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtHarga"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:background="@drawable/bg_box_border_bottom"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+
+    </LinearLayout>
+    <View style="@style/Divider" />
+</merge>

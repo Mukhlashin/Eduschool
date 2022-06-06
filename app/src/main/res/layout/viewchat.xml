@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/box"
+        android:layout_width="600dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bubble_out"
+        >
+        <LinearLayout
+            android:id="@+id/isi"
+            android:longClickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:paddingRight="10dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/txtID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/panelFile"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/fotouser"
+                        app:civ_border_width="2dp"
+                        android:layout_marginLeft="5dp"
+                        app:civ_border_color="@color/green_900"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnZoom"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="10dp"
+                            app:srcCompat="@drawable/ic_zoom"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txtUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="@dimen/spacing_medium"
+                            android:layout_toLeftOf="@+id/btnZoom"
+                            android:text="Anton"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/ListObject"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </FrameLayout>
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:visibility="gone"
+                    android:indeterminate="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+               <VideoView
+                   android:visibility="gone"
+                   android:id="@+id/videoView"
+                   android:layout_marginLeft="10dp"
+                   android:layout_width="150dp"
+                   android:layout_height="100dp"/>
+                <TextView
+                    android:id="@+id/txtPerihal"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="italic"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="13.5dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sir amet. Lorem ipsum dolor sir amet. Lorem ipsum dolor sir amet."
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/txtJam"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtUser"
+                    android:text="20:00"
+                    android:textColor="@color/black"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:textSize="13.5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/btnBalas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button"
+                    android:text="Balas"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/btnSalin"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xmedium"
+                    android:background="@drawable/bg_button"
+                    android:text="Salin"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/btnHapus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_button"
+                    android:text="Hapus"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

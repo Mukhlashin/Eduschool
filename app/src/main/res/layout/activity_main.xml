@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/socialite"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/menuEDU"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_card_edu"
+                app:cardCornerRadius="20dp"
+              >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_edu" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="250dp"
+                android:layout_height="270dp"
+                android:background="@color/white"
+                android:layout_marginTop="-70dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="-1dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="60dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Modul EDU"
+                        android:textSize="8pt"
+                        android:textAlignment="center"
+                        android:textColor="@color/socialite_complimentary"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terbaru:"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="28dp">
+                        <TextView
+                            android:id="@+id/lblKeterangan1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Materi baru :"
+                            android:textColor="@color/socialite_darker"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/lblJumlahKet1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="2"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/socialite_darker"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="28dp">
+
+                        <TextView
+                            android:id="@+id/lblKeterangan2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PR :"
+                            android:textColor="@color/socialite_darker"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lblJumlahKet2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="1"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/socialite_darker"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Notice :"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblNotice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="28dp"
+                        android:text="Senin, 2 Maret 2022 ulang harian Matematika"
+                        android:textColor="@color/socialite_complimentary"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/menuKoperasi"
+            android:orientation="vertical"
+            android:layout_marginLeft="100px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_card_edu"
+                app:cardCornerRadius="20dp"
+               >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/green" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_marginTop="-70dp"
+                android:layout_width="250dp"
+                android:layout_height="270dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="-1dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Modul KOPERASI"
+                        android:textAlignment="center"
+                        android:textColor="@color/green"
+                        android:textSize="8pt"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Notice :"
+                        android:textSize="6pt"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="28dp"
+                        android:text="BerasMU sudah tersedia"
+                        android:textColor="@color/socialite_darker" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="28dp"
+                        android:text="SeragamMU murah sudah bisa dibeli"
+                        android:textColor="@color/socialite_darker" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

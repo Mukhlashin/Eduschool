@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border_bottom"
+        android:layout_marginBottom="3dp"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtTanggal"
+            android:background="@drawable/box_border_bottom"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="01-MAY-2022 08::05"
+            android:textColor="@color/grey_900"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtPelajaran"
+            android:background="@drawable/box_border_bottom"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="BAHASA INDONESIA"
+            android:textColor="@color/grey_900"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtGuru"
+            android:background="@drawable/box_border_bottom"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Guru"
+            android:textColor="@color/grey_900"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtKehadiran"
+            android:background="@drawable/box_border_bottom"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:text="Masuk"
+            android:textColor="@color/grey_900"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+        <TextView
+            android:id="@+id/txtKeterangan"
+            android:background="@drawable/box_border_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Keterangan"
+            android:textColor="@color/grey_900"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="@dimen/spacing_large"/>
+    </LinearLayout>
+    <View style="@style/Divider" />
+</merge>
