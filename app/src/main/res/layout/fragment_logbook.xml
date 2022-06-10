@@ -32,13 +32,17 @@
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_below="@+id/judul"
-            android:id="@+id/items"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/judul">
+            <LinearLayout
+                android:id="@+id/items"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

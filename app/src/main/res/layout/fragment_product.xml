@@ -153,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:text="Masukkan Keranjang"
                         android:textColor="@color/white"
-                        android:background="#ec4f4e"
+                        android:background="@color/colorPrimary"
                         android:textAllCaps="false" />
 
                 </androidx.cardview.widget.CardView>

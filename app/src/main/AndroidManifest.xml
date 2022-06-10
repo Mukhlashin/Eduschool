@@ -25,22 +25,27 @@
         tools:targetApi="31">
         <activity
             android:name=".KoperasiMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".EDUMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".AdminKoperasiActivity"
             android:exported="false" />
         <activity
             android:name=".ShowVideoChat"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ShowPDFChat"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".DialogGambar"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
@@ -48,26 +53,29 @@
         <activity
             android:name=".MyConfirmDialog"
             android:excludeFromRecents="true"
-            android:label="" />
+            android:label=""
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MyDialog"
             android:excludeFromRecents="true"
             android:label=""
-            android:theme="@style/Theme.UserDialog" />
+            android:theme="@style/Theme.UserDialog"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MyDialog2"
             android:excludeFromRecents="true"
             android:label=""
-            android:theme="@style/Theme.UserDialog" />
+            android:theme="@style/Theme.UserDialog"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MyDialog3"
             android:excludeFromRecents="true"
             android:label=""
-            android:theme="@style/Theme.UserDialog" />
+            android:theme="@style/Theme.UserDialog"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

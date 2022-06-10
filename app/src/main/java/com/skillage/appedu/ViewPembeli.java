@@ -2,11 +2,11 @@ package com.skillage.appedu;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 
 public class ViewPembeli extends RelativeLayout {
@@ -14,7 +14,7 @@ public class ViewPembeli extends RelativeLayout {
     View rootView;
     AppCompatActivity activity;
     String nofaktur;
-    LinearLayout item;
+    ConstraintLayout item;
     TextView txtTanggal,txtNoFaktur,txtNamaUnitUsaha,txtStatus,txtTotal;
 
     public ViewPembeli(Context context) {
@@ -25,7 +25,7 @@ public class ViewPembeli extends RelativeLayout {
 
     private void init(final Context context) {
         rootView = inflate(context, R.layout.viewbelanja, this);
-        item=(LinearLayout) rootView.findViewById(R.id.item);
+        item=(ConstraintLayout) rootView.findViewById(R.id.item);
         txtTanggal = (TextView) rootView.findViewById(R.id.txtTanggal);
         txtNoFaktur = (TextView) rootView.findViewById(R.id.txtNoFaktur);
         txtNamaUnitUsaha = (TextView) rootView.findViewById(R.id.txtNamaUnitUsaha);

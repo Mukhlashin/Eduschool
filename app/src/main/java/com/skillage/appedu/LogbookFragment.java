@@ -84,9 +84,9 @@ public class LogbookFragment extends Fragment {
         protected void onPostExecute(Integer result) {
             progressDialog.hide();
             items.removeAllViews();
-            ViewPembeliHeader v2=new ViewPembeliHeader(getContext());
-            v2.setData("","","","","");
-            items.addView(v2);
+//            ViewPembeliHeader v2=new ViewPembeliHeader(getContext());
+//            v2.setData("","","","","");
+//            items.addView(v2);
             for (int i=0; i<=GlobalVar.pembeli.size()-1; i++) {
                 ViewPembeli v=new ViewPembeli(getContext());
                 v.activity= (AppCompatActivity) getActivity();
@@ -94,7 +94,6 @@ public class LogbookFragment extends Fragment {
                 v.setData(GlobalVar.pembeli.get(i).no_faktur,GlobalVar.pembeli.get(i).tanggal,GlobalVar.pembeli.get(i).nama,total,GlobalVar.pembeli.get(i).pembeli);
                 items.addView(v);
             }
-
             refreshLayout.setRefreshing(false);
         }
     }

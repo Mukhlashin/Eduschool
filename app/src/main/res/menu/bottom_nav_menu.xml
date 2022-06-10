@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mHome"
+        android:title="Pesanan"
+        android:icon="@drawable/online_shopping_resizeable"/>
+    <item android:id="@+id/mSearch"
+        android:title="Penjualan"
+        android:icon="@drawable/online_shopping_resizeable"/>
+    <item android:id="@+id/mplaceholder"
+        android:title="" />
+    <item android:id="@+id/mPerson"
+        android:title="Produk"
+        android:icon="@drawable/checklist_resizeable"/>
+    <item android:id="@+id/mSetting"
+        android:title="Stok"
+        android:icon="@drawable/user_resizeable"/>
+</menu>

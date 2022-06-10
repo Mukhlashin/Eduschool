@@ -32,7 +32,6 @@ public class MarketplaceFragment extends Fragment {
         RelativeLayout panelButton=view.findViewById(R.id.panelButton);
         if (!GlobalVar.role.equals("R.11")) {
             panelButton.setVisibility(View.GONE);
-
         }
         btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
